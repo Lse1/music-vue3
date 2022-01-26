@@ -34,7 +34,6 @@ export default {
     .header-left{
       height: 100%;
       @include bg_img('../assets/images/logo')
-      // background-image: url('../assets/images/logo_163.png')
     }
     .header-right{
       height: 100%;

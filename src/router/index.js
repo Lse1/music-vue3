@@ -53,7 +53,13 @@ const routes = [
   {
     path: '/recommend',
     name: 'recommend',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Recommend.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Recommend.vue'),
+    children: [
+      {
+        path: 'detail/:id/:type',
+        component: () => import(/* webpackChunkName: "about" */ '../views/Detail.vue')
+      }
+    ]
   },
   {
     path: '/about',
