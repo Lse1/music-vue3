@@ -61,6 +61,18 @@ const routes = [
         component: () => import(/* webpackChunkName: "about" */ '../views/Detail.vue')
       }
     ]
+  },
+  {
+    path: '/singer',
+    name: 'singer',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Singer.vue'),
+    children: [
+      {
+        path: 'detail/:id/:type',
+        name: 'detail',
+        component: () => import(/* webpackChunkName: "about" */ '../views/Detail.vue')
+      }
+    ]
   }
 ]
 
