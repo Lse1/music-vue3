@@ -30,9 +30,14 @@
       </ul>
       <div class="fix-title" v-show="fixTitle !== ''" ref="fixTitle">{{fixTitle}}</div>
     </div>
-    <transition>
+    <!-- <transition>
       <router-view></router-view>
-    </transition>
+    </transition> -->
+    <router-view  v-slot="{ Component }">
+      <transition>
+          <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 

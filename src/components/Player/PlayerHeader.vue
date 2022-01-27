@@ -50,10 +50,8 @@ export default {
     margin-top: 8px;
   }
   .header-left{
+    height: 100%;
     @include bg_img('../../assets/images/down')
-  }
-  .header-right{
-    // @include bg_img('../../assets/images/more')
   }
   .header-title{
     display: flex;
