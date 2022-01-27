@@ -1,12 +1,7 @@
 <template>
   <swiper class="banner"
           v-if="banners.length > 1"
-          :loop="true"
-          :autoplay="{
-            delay:1000
-            }"
-          :observer="true"
-          :observeParents="true">
+          :options="swiperOptions">
     <swiper-slide v-for="value in banners"
                   :key="value.bannerId"
                   class="item">

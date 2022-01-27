@@ -13,20 +13,20 @@
       </transition>
     </router-view>
     <!-- <router-view></router-view> -->
-    <!-- <Player></Player> -->
+    <Player></Player>
   </div>
 </template>
 
 <script>
 import MainHeader from './components/MainHeader'
 import Tabbar from './components/Tabbar'
-// import Player from './views/Player'
+import Player from './views/Player'
 export default {
   name: 'App',
   components: {
     MainHeader,
-    Tabbar
-    // Player
+    Tabbar,
+    Player
   }
 }
 </script>
