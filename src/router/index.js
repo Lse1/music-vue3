@@ -10,6 +10,10 @@ const routes = [
       {
         path: 'detail/:id/:type',
         component: () => import('../views/Detail.vue')
+      },
+      {
+        path: 'songmore/:title1',
+        component: () => import('../views/SongMore.vue')
       }
     ]
   },
@@ -51,6 +55,16 @@ const routes = [
   {
     path: '/account',
     component: () => import('../views/Account.vue')
+  },
+  {
+    path: '/seemore/:title1',
+    component: () => import('../views/Seemore.vue'),
+    children: [
+      {
+        path: 'videoplayer/:id/:title',
+        component: () => import('../views/VideoPlayer.vue')
+      }
+    ]
   }
 ]
 

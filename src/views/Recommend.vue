@@ -47,7 +47,7 @@ export default {
     },
     selectmoreItem (title1) {
       this.$router.push({
-        path: `/seemore/${title1}`
+        path: `/recommend/SongMore/${title1}`
       })
     }
   },
