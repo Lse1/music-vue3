@@ -14,6 +14,16 @@ const routes = [
     ]
   },
   {
+    path: '/video',
+    component: () => import('../views/Video.vue'),
+    children: [
+      {
+        path: 'videoplayer/:id/:title',
+        component: () => import('../views/VideoPlayer.vue')
+      }
+    ]
+  },
+  {
     path: '/singer',
     name: 'singer',
     component: () => import('../views/Singer.vue'),
