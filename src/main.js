@@ -9,6 +9,7 @@ import VueLazyLoad from 'vue3-lazyload'
 import VideoPlayer from 'vue-video-player/src'
 import 'vue-video-player/src/custom-theme.css'
 import 'video.js/dist/video-js.css'
+import './util/rem'
 const app = createApp(App)
 
 fastclick.attach(document.body)
