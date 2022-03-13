@@ -1,5 +1,8 @@
 // const jsdom = require('jsdom')
 // const { JSDOM } = jsdom
+const AutoImport = require('unplugin-auto-import/webpack')
+const Components = require('unplugin-vue-components/webpack')
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 module.exports = {
   publicPath: '/',
   configureWebpack: {
@@ -16,7 +19,15 @@ module.exports = {
           }
         }
       ]
-    }
+    },
+    plugins: [
+      AutoImport({
+        resolvers: [ElementPlusResolver()]
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()]
+      })
+    ]
   }
   // // 以下代码是安装了预渲染的插件之后自动添加的
   // pluginOptions: {

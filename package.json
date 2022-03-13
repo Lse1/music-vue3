@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.25.0",
     "core-js": "^3.6.5",
+    "element-plus": "^2.1.0",
     "fastclick": "^1.0.6",
     "iscroll": "^5.2.0",
     "swiper": "^7.4.1",
@@ -40,6 +41,8 @@
     "postcss-pxtorem": "^5.1.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "unplugin-auto-import": "^0.6.4",
+    "unplugin-vue-components": "^0.18.0",
     "vue-video-player": "^5.0.2"
   },
   "gitHooks": {

@@ -1,7 +1,19 @@
 import axios from 'axios'
 // import Vue from 'vue'
 // import { createApp } from 'vue'
+import { ElLoading } from 'element-plus'
 
+let loadingInstance = null
+function startLoading () {
+  loadingInstance = ElLoading.service({
+    lock: true,
+    text: 'Loading',
+    background: 'rgba(0, 0, 0, 0.7)'
+  })
+}
+function endLoading () {
+  loadingInstance.close()
+}
 // axios.defaults.baseURL = 'http://127.0.0.1:3000'
 axios.defaults.baseURL = 'http://106.55.188.48:3000/'
 axios.defaults.timeout = 5000
@@ -12,6 +24,7 @@ axios.interceptors.request.use(function (config) {
   // 在发送请求之前做些什么
   count++
   // createApp().showLoading()
+  startLoading()
   return config
 }, function (error) {
   // 对请求错误做些什么
@@ -25,6 +38,7 @@ axios.interceptors.response.use(function (response) {
   count--
   if (count === 0) {
     // createApp().hiddenLoading()
+    endLoading()
   }
   return response
 }, function (error) {

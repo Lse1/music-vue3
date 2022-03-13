@@ -10,6 +10,8 @@ import VideoPlayer from 'vue-video-player/src'
 import 'vue-video-player/src/custom-theme.css'
 import 'video.js/dist/video-js.css'
 import './util/rem'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 const app = createApp(App)
 
 fastclick.attach(document.body)
@@ -18,4 +20,5 @@ app.use(VueLazyLoad, {
   error: './assets/images/loading.png'
 })
 app.use(VideoPlayer)
+app.use(ElementPlus)
 app.use(store).use(router).mount('#app')
