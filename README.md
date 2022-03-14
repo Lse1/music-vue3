@@ -1,5 +1,5 @@
 # music-vue3
-
+后端： 使用Binaryify大佬的node版 https://github.com/Binaryify/NeteaseCloudMusicApi
 ## Project setup
 ```
 yarn install
